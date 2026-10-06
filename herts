@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- اطلاعات برای گوگل -->
+    <title>برای تو 💙 | همیشه کنارت هستم</title>
+
+    <meta name="description"
+          content="یه پیام کوچیک برای کسی که خسته است و تلاش می‌کند؛ بدونی که تنها نیستی و من کنارت هستم. 💙">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family:
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #174f88 0%,
+                    #091827 45%,
+                    #02060b 100%
+                );
+
+            color: white;
+
+            overflow: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 650px;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        .top-heart {
+            font-size: 65px;
+
+            animation:
+                pulse 1.5s infinite;
+
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 30px;
+
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            color: #b9cce2;
+
+            font-size: 17px;
+
+            line-height: 2;
+
+            margin-bottom: 30px;
+        }
+
+        /* دکمه */
+
+        #startButton {
+
+            border: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #199cff,
+                    #0055c7
+                );
+
+            color: white;
+
+            padding:
+                16px
+                38px;
+
+            border-radius: 50px;
+
+            font-family: inherit;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 35px
+                rgba(0,130,255,.35);
+
+            transition: .3s;
+        }
+
+        #startButton:hover {
+
+            transform:
+                scale(1.08);
+
+            box-shadow:
+                0 15px 45px
+                rgba(0,150,255,.55);
+        }
+
+        /* پیام */
+
+        #message {
+
+            display: none;
+
+            animation:
+                appear 1s ease;
+        }
+
+        .message {
+
+            font-size: 28px;
+
+            line-height: 2;
+
+            font-weight: bold;
+
+            margin-top: 20px;
+        }
+
+        .message span {
+
+            color: #61b8ff;
+
+            text-shadow:
+                0 0 20px
+                rgba(60,160,255,.4);
+        }
+
+        /* قلب اصلی */
+
+        #bigHeart {
+
+            display: none;
+
+            margin:
+                35px
+                auto
+                0;
+
+            width: fit-content;
+
+            font-size: 85px;
+
+            cursor: pointer;
+
+            user-select: none;
+
+            transition:
+                font-size .35s ease,
+                transform .2s ease;
+
+            filter:
+                drop-shadow(
+                    0 0 20px
+                    rgba(0,140,255,.7)
+                );
+        }
+
+        #bigHeart:hover {
+
+            transform:
+                scale(1.08);
+        }
+
+        #hint {
+
+            display: none;
+
+            color: #91aac5;
+
+            font-size: 14px;
+
+            margin-top: 15px;
+        }
+
+        /* قلب‌های پس‌زمینه */
+
+        .floating {
+
+            position: fixed;
+
+            bottom: -60px;
+
+            opacity: .15;
+
+            font-size: 25px;
+
+            pointer-events: none;
+
+            animation:
+                float 8s linear infinite;
+        }
+
+        .f1 {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .f2 {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .f3 {
+            left: 70%;
+            animation-delay: 4s;
+        }
+
+        .f4 {
+            left: 90%;
+            animation-delay: 1s;
+        }
+
+        @keyframes pulse {
+
+            0%,100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform:
+                    translateY(25px)
+                    scale(.85);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+        @keyframes float {
+
+            from {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+            }
+
+            to {
+                transform:
+                    translateY(-120vh)
+                    rotate(360deg);
+            }
+        }
+
+        @media(max-width:600px) {
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .message {
+                font-size: 22px;
+            }
+
+            #bigHeart {
+                font-size: 75px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- قلب‌های پس‌زمینه -->
+
+    <div class="floating f1">💙</div>
+    <div class="floating f2">💙</div>
+    <div class="floating f3">💙</div>
+    <div class="floating f4">💙</div>
+
+
+    <main class="container">
+
+        <div class="top-heart">
+            💙
+        </div>
+
+        <h1>
+            یه چیزی می‌خوام بهت بگم...
+        </h1>
+
+        <p class="intro">
+            فقط روی این دکمه کلیک کن.
+        </p>
+
+
+        <button
+            id="startButton"
+            onclick="showMessage()">
+
+            اینجا رو بزن 💙
+
+        </button>
+
+
+        <section id="message">
+
+            <div class="message">
+
+                می‌دونم خسته‌ای و تلاش می‌کنی...
+                <br>
+
+                <span>
+                    من کنارتم 💙
+                </span>
+
+            </div>
+
+
+            <div
+                id="bigHeart"
+                onclick="growHeart()">
+
+                💙
+
+            </div>
+
+
+            <div id="hint">
+                روی قلب بزن...
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        let heartSize = 85;
+
+
+        function showMessage() {
+
+            document
+                .getElementById("startButton")
+                .style.display = "none";
+
+            document
+                .querySelector(".intro")
+                .style.display = "none";
+
+            document
+                .getElementById("message")
+                .style.display = "block";
+
+            document
+                .getElementById("bigHeart")
+                .style.display = "block";
+
+            document
+                .getElementById("hint")
+                .style.display = "block";
+        }
+
+
+        function growHeart() {
+
+            heartSize += 30;
+
+            document
+                .getElementById("bigHeart")
+                .style.fontSize =
+                heartSize + "px";
+
+
+            if (heartSize >= 300) {
+
+                document
+                    .getElementById("hint")
+                    .innerText =
+                    "هرچقدر هم بزرگ بشه، باز کمه برای اینکه بدونی چقدر برام مهمی 💙";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
